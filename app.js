@@ -30,13 +30,14 @@ const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
 // Initialize Socket.IO with the server
 const io = new Server(server, {
   cors: {
-    origin: *,
-   methods: ['GET','POST','PUT','DELETE','PATCH','OPTIONS'],
+    origin: '*',  // ✅ toutes les origines
+    methods: ['GET','POST','PUT','DELETE','PATCH','OPTIONS'],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"]
   },
   transports: ['websocket', 'polling']
 });
+
 
 // Test Socket.IO connection
 io.on('connection', (socket) => {
