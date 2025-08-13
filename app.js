@@ -54,7 +54,7 @@ NotificationService.initializeSocketIO(io);
 
 // Middleware
 app.use(cors({
-  origin: CLIENT_URL,
+  origin: '*',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
