@@ -30,8 +30,8 @@ const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
 // Initialize Socket.IO with the server
 const io = new Server(server, {
   cors: {
-    origin: CLIENT_URL,
-    methods: ["GET", "POST"],
+    origin: *,
+   methods: ['GET','POST','PUT','DELETE','PATCH','OPTIONS'],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"]
   },
